@@ -1,10 +1,11 @@
 function peticioAjax(url) {
-    var jqxhr = $.get(url,{
+    var jqxhr = $.get(url, {
         nom: document.getElementById("nom").value,
         cognom: document.getElementById("cognom").value
     })
             .done(function (data) {
                 alert(data);
+                document.getElementById("area").textContent = data;
             })
             .fail(function () {
                 alert("Error");
@@ -15,12 +16,13 @@ function peticioAjax(url) {
 }
 
 function peticioAjaxPost(url) {
-    var jqxhr = $.post(url,{
+    var jqxhr = $.post(url, {
         nomPost: document.getElementById("nomPost").value,
         cognomPost: document.getElementById("cognomPost").value
     })
             .done(function (data) {
                 alert(data);
+                document.getElementById("area").textContent = data;
             })
             .fail(function () {
                 alert("Error");

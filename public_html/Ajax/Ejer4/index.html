@@ -13,10 +13,10 @@ and open the template in the editor.
         <script type="text/javascript" src="java.js"></script>
     </head>
     <body>
-        <form id="formu">
-            <input id="nom" type="text">
-            <input id="cognom" type="text">
-            <input id="btnPeticion" type="button" value="Peticion" onclick="peticioAjax('peticion.php')">
-        </form>
+        <button onclick="ciudades()">Ciudades</button>    
+        <select id="ciudad" onchange="peticioAjax('barrio.php')">
+        </select>
+        <select id="barrio">
+        </select>
     </body>
 </html>
